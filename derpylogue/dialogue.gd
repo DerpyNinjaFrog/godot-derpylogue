@@ -8,6 +8,8 @@ func load_from_file(file: String):
 	parse(parser)
 
 func parse(parser: XMLParser):
+	if parser.read() == ERR_FILE_EOF: return
+	
 	var node_type := parser.get_node_type()
 	if node_type == parser.NODE_UNKNOWN: parse(parser)
 	if node_type == parser.NODE_COMMENT: parse(parser)
@@ -24,3 +26,4 @@ func parse(parser: XMLParser):
 		var attribute_value = parser.get_attribute_value(i)
 		
 		node.attributes[attribute_name] = attribute_value
+	

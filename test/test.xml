@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<options id="greeting" character="Nathaniel">
+	<prompt>Icky or Slobango?</prompt>
+	<option to="icky">Icky</option>
+	<option to="slobango">Slobango</option>
+</options>
+
+<line id="icky" character="Nathaniel">I like Icky!</line>
+<line id="slobango" character="Nathaniel">I like Slobango!</line>
+
+<line to="greeting">Bye!</line>
